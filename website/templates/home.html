@@ -4,20 +4,26 @@
     <title>Example Web Interface</title>
 </head>
 <body>
-    <form action="your_server_script.php" method="post">
-        <label for="field1">Field 1:</label>
-        <input type="text" id="field1" name="field1" placeholder="Enter text for Field 1" required><br><br>
+    <form method="post">
+        <div class="form-group">
+            <label for="dashboard_source">Dashboard Source:</label><br>
+            <input type="text" id="dashboard_source" name="dashboard_source"
+                   placeholder="Enter Dashboard Source" required><br><br>
+        </div>
 
-        <label for="field2">Field 2:</label>
-        <input type="text" id="field2" name="field2" placeholder="Enter text for Field 2" required><br><br>
+        <div class="form-group">
+            <label for="config">Config File:</label><br>
+            <input type="text" id="config" name="config"
+                   placeholder="Enter Config File" required><br><br>
+        </div>
 
-        <label for="field3">Field 3:</label>
-        <input type="text" id="field3" name="field3" placeholder="Enter text for Field 3" required><br><br>
+        <div class="form-group">
+            <label for="destination_name">Destination Name:</label><br>
+            <input type="text" id="destination_name" name="destination_name"
+                   placeholder="Enter Destination Name" required><br><br>
+        </div>
 
-        <label for="field4">Field 4:</label>
-        <input type="text" id="field4" name="field4" placeholder="Enter text for Field 4" required><br><br>
-
-        <input type="submit" value="Submit">
+        <button type="submit">Clone</button>
     </form>
 </body>
 </html>
