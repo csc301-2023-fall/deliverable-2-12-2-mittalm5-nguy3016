@@ -6,6 +6,7 @@ def create_app():
     app.config['SECRET_KEY'] = "AzsdkqjwheqjeaposdApqEpdasb"
 
     from .views import views
+    from website import pocFiles
 
     app.register_blueprint(views, url_prefix='/')
 
