@@ -7,6 +7,7 @@ def create_app():
 
     from .views import views
     from website import pocFiles
+    from .export_dashboard import export_dashboard
 
     app.register_blueprint(views, url_prefix='/')
 
