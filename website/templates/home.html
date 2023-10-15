@@ -5,25 +5,32 @@
 </head>
 <body>
     <form method="post">
-        <div class="form-group">
+        <div class="form-group" style="text-align:center">
             <label for="dashboard_source">Dashboard Source:</label><br>
-            <input type="text" id="dashboard_source" name="dashboard_source"
-                   placeholder="Enter Dashboard Source" required><br><br>
+
+            <select id="dashboard_source" name="dashboard_source">
+            {% for key, value in data.items() %}
+                <option value="{{ value }}">{{ value }}</option>
+            {% endfor %}
+            </select><br><br>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="text-align:center">
             <label for="config">Config File:</label><br>
             <input type="text" id="config" name="config"
                    placeholder="Enter Config File" required><br><br>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="text-align:center">
             <label for="destination_name">Destination Name:</label><br>
             <input type="text" id="destination_name" name="destination_name"
                    placeholder="Enter Destination Name" required><br><br>
         </div>
 
-        <button type="submit">Clone</button>
+        <div class="form-group" style="text-align:center">
+            <button type="submit" style="text-align:center">Clone</button>
+        </div>>
     </form>
+
 </body>
 </html>
