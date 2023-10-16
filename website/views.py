@@ -1,12 +1,6 @@
-from flask import Blueprint, render_template, request
-from website.pocFiles.endpoints import DASHBOARD_ENDPOINT
-from website.pocFiles.superset_constants import (
-    SUPERSET_INSTANCE_URL,
-    SUPERSET_USERNAME,
-    SUPERSET_PASSWORD
-)
-import requests
+from flask import Blueprint, render_template
 import os
+from website.api_helpers import get_access_token, get_dashboards
 
 views = Blueprint('views', __name__)
 
@@ -14,18 +8,8 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
 
-    login_data = {
-        "username": SUPERSET_USERNAME,
-        "password": SUPERSET_PASSWORD,
-        "provider": "db"
-    }
-
-    # makes a post request to get access token
-    token = requests.post(SUPERSET_INSTANCE_URL + "/api/v1/security/login", json=login_data).json()["access_token"]
-
-    # using the token to get all the dashboards
-    headers = {"Authorization": "Bearer " + token}
-    dashboards = requests.get(SUPERSET_INSTANCE_URL + DASHBOARD_ENDPOINT, headers=headers).json()
+    token = get_access_token()
+    dashboards = get_dashboards(token)
 
     # passing in the dashboard titles to the html file to output them
     html_data = {}
@@ -36,12 +20,11 @@ def home():
 
 @views.route('/clone', methods=['POST'])
 def clone():
-    # dashboard_source = request.form.get('dashboard_source')
-    # config = request.form.get('config')
-    # destination_name = request.form.get('destination_name')
 
     # simulating a call to a command line command
-    os.system('python website/export_dashboard.py -d "[ untitled dashboard ]" -o "test.json"')
+    os.system('python website/export_dashboard.py -d "test" -o "test.json"')
+    os.system('python website/create_derived_dashboard.py -f test.json '
+              '-c website/test_config_map.json -n test_copy')
 
     return "Form Submitted"
 
