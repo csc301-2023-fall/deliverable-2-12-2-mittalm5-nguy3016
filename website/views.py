@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 import os
-from website.api_helpers import get_access_token, get_dashboards
+from website.api_helpers import get_access_token, get_dashboards, get_charts, get_datasets
 
 views = Blueprint('views', __name__)
 
@@ -10,11 +10,17 @@ def home():
 
     token = get_access_token()
     dashboards = get_dashboards(token)
+    charts = get_charts(token)
+    datasets = get_datasets(token)
 
     # passing in the dashboard titles to the html file to output them
-    html_data = {}
+    html_data = {
+        "dashboards": [],
+        "charts": charts,
+        "datasets": datasets
+    }
     for result in dashboards["result"]:
-        html_data[result["id"]] = result["dashboard_title"]
+        html_data[dashboards].append(result["dashboard_title"])
     return render_template("home.html", data=html_data)
 
 

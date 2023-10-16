@@ -1,6 +1,6 @@
 import requests
 
-from website.endpoints import DASHBOARD_ENDPOINT
+from website.endpoints import DASHBOARD_ENDPOINT, CHART_ENDPOINT, DATASET_ENDPOINT
 from website.superset_constants import SUPERSET_PASSWORD, SUPERSET_USERNAME, SUPERSET_INSTANCE_URL
 
 
@@ -20,3 +20,21 @@ def get_dashboards(token):
     # using the token to get all the dashboards
     headers = {"Authorization": "Bearer " + token}
     return requests.get(SUPERSET_INSTANCE_URL + DASHBOARD_ENDPOINT, headers=headers).json()
+
+
+def get_charts(token):
+    headers = {"Authorization": "Bearer " + token}
+    charts = requests.get(SUPERSET_INSTANCE_URL + CHART_ENDPOINT, headers=headers).json()
+    chart_names = []
+    for chart in charts["result"]:
+        chart_names.append(chart["slice_name"])
+    return chart_names
+
+
+def get_datasets(token):
+    headers = {"Authorization": "Bearer " + token}
+    datasets = requests.get(SUPERSET_INSTANCE_URL + DATASET_ENDPOINT, headers=headers).json()
+    dataset_names = []
+    for dataset in datasets["result"]:
+        dataset_names.append(dataset["table_name"])
+    return dataset_names
