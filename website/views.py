@@ -26,6 +26,6 @@ def clone():
     os.system('python website/create_derived_dashboard.py -f test.json '
               '-c website/test_config_map.json -n test_copy')
 
-    return "Form Submitted"
+    return render_template("clone.html")
 
 
