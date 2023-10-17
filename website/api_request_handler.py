@@ -1,6 +1,7 @@
 import os
 import requests
 
+
 class APIRequestHandler:
     def __init__(self, superset_instance_url, superset_username, superset_password):
         self.session = requests.Session()
@@ -14,7 +15,7 @@ class APIRequestHandler:
             raise SystemExit('Both SUPERSET_USERNAME and SUPERSET_PASSWORD should be defined in the environment.')
 
         payload = {"username": self.superset_username, "password": self.superset_password, "provider": "db"}
-    
+
         login_request = self.session.post(self.superset_instance_url + "api/v1/security/login", json=payload)
         access_token = login_request.json().get("access_token")
         if not access_token:
@@ -23,18 +24,19 @@ class APIRequestHandler:
                              f"Response: {login_request.json()}")
 
         headers_auth = {"Authorization": "Bearer " + str(access_token)}
-    
-        csrf_request = self.session.get(self.superset_instance_url + "api/v1/security/csrf_token/", json=payload, headers=headers_auth)
+
+        csrf_request = self.session.get(self.superset_instance_url + "api/v1/security/csrf_token/", json=payload,
+                                        headers=headers_auth)
         csrf_token = csrf_request.json().get('result')
         if not csrf_token:
             raise SystemExit("CSRF token not found in response. "
                              "Please check the SUPERSET_USERNAME and SUPERSET_PASSWORD credentials.\n"
                              f"Response: {csrf_request.json()}")
-    
+
         headers_auth['X-CSRFToken'] = csrf_token
         headers_auth['accept'] = 'application/json'
         headers_auth['Referer'] = self.superset_instance_url
-    
+
         return headers_auth
 
     def _execute_http_method(self, http_method, endpoint, **kwargs):
