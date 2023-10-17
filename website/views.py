@@ -27,5 +27,3 @@ def clone():
               '-c website/test_config_map.json -n test_copy')
 
     return "Form Submitted"
-
-

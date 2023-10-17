@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <title>Example Web Interface</title>
 </head>
 <body>
-    <form action="/clone" method="post">
-        <div class="form-group">
-            <label for="dashboard_source">Dashboard Source:</label><br>
-            <h1>{{ data[1] }}</h1>
-            <h1>{{ data[2] }}</h1>
-            <input type="text" id="dashboard_source" name="dashboard_source"
-                   placeholder="Enter Dashboard Source" required><br><br>
-        </div>
+    <div class="center-container">
+        <div class="container">
+            <h1>Cloning Dashboards</h1>
+            <h3>Example Web Interface</h3><br><br>
+          
+            <form action="/clone" method="post">
+                <div class="form-group">
+                    <label for="dashboard_source">Dashboard Source:</label><br>
+                    <select id="dashboard_source" name="dashboard_source">
+                        {% for key, value in data.items() %}
+                        <option value="{{ value }}">{{ value }}</option>
+                        {% endfor %}
+                    </select>
+                    <br><br>
+                </div>
+              
+                <div class="form-group">
+                    <label for="config">Config File:</label><br>
+                    <input type="text" id="config" name="config" placeholder="Enter Config File" required>
+                    <br><br>
+                </div>
 
-        <div class="form-group">
-            <label for="config">Config File:</label><br>
-            <input type="text" id="config" name="config"
-                   placeholder="Enter Config File" required><br><br>
-        </div>
+                <div class="form-group">
+                    <label for="destination_name">Destination Name:</label><br>
+                    <input type="text" id="destination_name" name="destination_name" placeholder="Enter Destination Name" required>
+                    <br><br>
+                </div>
 
-        <div class="form-group">
-            <label for="destination_name">Destination Name:</label><br>
-            <input type="text" id="destination_name" name="destination_name"
-                   placeholder="Enter Destination Name" required><br><br>
+                <div class="form-group">
+                    <button type="submit">Clone</button>
+                </div>
+            </form>
         </div>
-
-        <button type="submit">Clone</button>
-    </form>
+    </div>
 </body>
 </html>
