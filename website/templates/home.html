@@ -4,9 +4,11 @@
     <title>Example Web Interface</title>
 </head>
 <body>
-    <form method="post">
+    <form action="/clone" method="post">
         <div class="form-group">
             <label for="dashboard_source">Dashboard Source:</label><br>
+            <h1>{{ data[1] }}</h1>
+            <h1>{{ data[2] }}</h1>
             <input type="text" id="dashboard_source" name="dashboard_source"
                    placeholder="Enter Dashboard Source" required><br><br>
         </div>
