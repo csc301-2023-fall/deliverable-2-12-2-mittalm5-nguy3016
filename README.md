@@ -9,10 +9,13 @@ To set up superset locally, execute the steps on this website: https://superset.
 Note that you may have to do some configuration for superset first, such as setting the secret key and the python path. Follow the steps on this website: https://superset.apache.org/docs/installation/configuring-superset/ 
 
 To generate a secret key, use the following command:
+
 `openssl rand -base64 42` 
 
 To set the `PYTHONPATH`, use the following commands:
+
 `export PYTHONPATH=/path/to/superset_config.py:$PYTHONPATH`
 
 Finally, to run superset, run:
+
 `superset run -p 8088 --with-threads --reload --debugger`
