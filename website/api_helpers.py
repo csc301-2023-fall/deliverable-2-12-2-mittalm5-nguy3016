@@ -19,7 +19,12 @@ def get_access_token():
 def get_dashboards(token):
     # using the token to get all the dashboards
     headers = {"Authorization": "Bearer " + token}
-    return requests.get(SUPERSET_INSTANCE_URL + DASHBOARD_ENDPOINT, headers=headers).json()
+    dashboards = requests.get(SUPERSET_INSTANCE_URL + DASHBOARD_ENDPOINT, headers=headers).json()
+
+    dashboard_names = []
+    for dashboard in dashboards["result"]:
+        dashboard_names.append((dashboard["id"], dashboard["dashboard_title"]))
+    return dashboard_names
 
 
 def get_charts(token):
@@ -27,7 +32,7 @@ def get_charts(token):
     charts = requests.get(SUPERSET_INSTANCE_URL + CHART_ENDPOINT, headers=headers).json()
     chart_names = []
     for chart in charts["result"]:
-        chart_names.append(chart["slice_name"])
+        chart_names.append((chart["dashboards"]["id"], chart["slice_name"]))
     return chart_names
 
 

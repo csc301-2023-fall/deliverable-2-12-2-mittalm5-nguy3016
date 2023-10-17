@@ -13,14 +13,12 @@ def home():
     charts = get_charts(token)
     datasets = get_datasets(token)
 
-    # passing in the dashboard titles to the html file to output them
+    # data to be passed into the html file
     html_data = {
-        "dashboards": [],
+        "dashboards": dashboards,
         "charts": charts,
         "datasets": datasets
     }
-    for result in dashboards["result"]:
-        html_data[dashboards].append(result["dashboard_title"])
     return render_template("home.html", data=html_data)
 
 
