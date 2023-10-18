@@ -3,10 +3,15 @@ Please Note that some of files in this repository are a part of the UNICEF proof
 The code written by our group members is in the following files: ```views.py```, ```main.py```, ```api_helpers.py```, ```index.html```, ```clone.html```, ```styles.css``` and ```script.js```. We also made some edits to ```export_dashboard.py``` to fix the proof of concept, however we still need to talk to our partner for this first.
 
 
-For our subteam, a local instance of Apache Superset is required. We are currently working with our partner to get an instance of superset hosted on the cloud for future submissions.
-Since superset is difficult to set up, we have also included a demo video here: https://www.loom.com/share/313f3af5cae74cd7894e1832628ac7fb?sid=f6ce5dbe-ee9e-49fb-8970-dd4c2ccba697
+We have made a demo video that showcases our work: https://www.loom.com/share/313f3af5cae74cd7894e1832628ac7fb?sid=f6ce5dbe-ee9e-49fb-8970-dd4c2ccba697. 
 
-To set up superset locally, execute the steps on this website: https://superset.apache.org/docs/installation/installing-superset-from-scratch/
+For our subteam, to run the code a local instance of Apache Superset is required, which is quite difficult to set up. We are currently working with our partner to get an instance of superset hosted on the cloud for future submissions. 
+
+Setup Instructions
+
+(Superset is not supported by Windows so these steps are exclusively for MacOS and Linux)
+
+To set up superset locally, execute the steps on this website: https://superset.apache.org/docs/installation/installing-superset-from-scratch/ 
 
 Note that you may have to do some configuration for superset first, such as setting the secret key and the python path. Follow the steps on this website: https://superset.apache.org/docs/installation/configuring-superset/ 
 
