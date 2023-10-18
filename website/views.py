@@ -1,3 +1,5 @@
+import os
+from website.api_helpers import get_access_token, get_dashboards
 from flask import Blueprint, render_template, request, jsonify
 
 views = Blueprint('views', __name__)
@@ -63,6 +65,10 @@ def clone():
     # Send to Manyas Function
     # To be completed after meeting with our partner
 
+    # simulating a call to a command line command
+    # os.system('python website/export_dashboard.py -d "test" -o "test.json"')
+    # os.system('python website/create_derived_dashboard.py -f test.json '
+    #           '-c website/test_config_map.json -n test_copy')
     return render_template("clone.html")
 
 
