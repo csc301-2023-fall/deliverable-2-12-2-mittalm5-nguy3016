@@ -9,22 +9,22 @@
         <div class="container">
             <h1>Cloning Dashboards</h1>
             <h3>Example Web Interface</h3><br><br>
-          
+
             <form action="/clone" method="post">
                 <div class="form-group">
                     <label for="dashboard_source">Dashboard Source:</label><br>
                     <select id="dashboard_source" name="dashboard_source">
-                        {% for key, value in data.items() %}
-                        <option value="{{ value }}">{{ value }}</option>
+                        <option value="">Select Dashboard</option>
+                        {% for dashboard_id, dashboard_name in html_data.dashboards %}
+                        <option value="{{ dashboard_id }}">{{ dashboard_name }}</option>
                         {% endfor %}
                     </select>
                     <br><br>
                 </div>
-              
-                <div class="form-group">
-                    <label for="config">Config File:</label><br>
-                    <input type="text" id="config" name="config" placeholder="Enter Config File" required>
-                    <br><br>
+
+                <div id="chart-selection" class="form-group">
+                    <!-- Additional classes used for selecting dataset for
+                        charts and their names will be generated here -->
                 </div>
 
                 <div class="form-group">
@@ -39,5 +39,6 @@
             </form>
         </div>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
