@@ -24,11 +24,10 @@ Finally, to run superset, run:
 
 
 
-
-Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. You must clone our repository to run our code. Alternateively, you can also watch the demo video using the link at the top of the Readme. 
+Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. You must clone our repository to run our code. Alternatively, you can also watch the demo video using the link at the top of the Readme. 
 
 After cloning this repository, run the following command to install all the dependencies:
 
 ```pip install -r requirements.txt ``` 
 
-Then, run ```python3 main,py``` to run the code. You can also use the command ```gunicorn main:app ```.
+Then, run ```python3 main.py``` to run the code. You can also use the command ```gunicorn main:app```
