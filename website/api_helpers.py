@@ -27,12 +27,12 @@ def get_dashboards(token):
     return dashboard_names
 
 
-def get_charts(token):
+def get_charts(token, dashboard_id):
     headers = {"Authorization": "Bearer " + token}
-    charts = requests.get(SUPERSET_INSTANCE_URL + CHART_ENDPOINT, headers=headers).json()
+    charts = requests.get(SUPERSET_INSTANCE_URL + DASHBOARD_ENDPOINT + str(dashboard_id) + '/charts', headers=headers).json()
     chart_names = []
     for chart in charts["result"]:
-        chart_names.append((chart["dashboards"]["id"], chart["slice_name"]))
+        chart_names.append(chart["slice_name"])
     return chart_names
 
 
