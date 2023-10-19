@@ -1,6 +1,6 @@
 import requests
 
-from website.endpoints import DASHBOARD_ENDPOINT, CHART_ENDPOINT, DATASET_ENDPOINT
+from website.endpoints import DASHBOARD_ENDPOINT, DATASET_ENDPOINT
 from website.superset_constants import SUPERSET_PASSWORD, SUPERSET_USERNAME, SUPERSET_INSTANCE_URL
 
 
