@@ -8,7 +8,7 @@ For the frontend, we chose to use HTML, CSS, and JS, as it was the simplest choi
 Additionally, an additional benefit is that it should be relatively simple to switch from HTML to React when we merge with the dedicated frontend sub-team.
 <br/><br/>
 
-### 2. Individual contributions explaining who did what. You can keep it to at most one paragraph per person to highlight any work that is not captured in any of the repos.**
+### 2. Individual contributions explaining who did what. You can keep it to at most one paragraph per person to highlight any work that is not captured in any of the repos.
 
 _Andrew_
 
@@ -28,12 +28,12 @@ frontend. She used Postman to test the API responses as well. Manya also worked 
 our partner. She attempted to fix the issue by converting the yaml file into json, however more time and input from UNICEF is needed for this. 
 <br/><br/>
 
-### 3. All the details and instructions needed for your TA to see and verify your work. You need to provide enough documentation so your TA can confirm:**
+### 3. All the details and instructions needed for your TA to see and verify your work. You need to provide enough documentation so your TA can confirm:
 
 All relevant information on this topic is located in README.md
 <br/><br/>
 
-### 4. Your application (see deployment section below for details)**
+### 4. Your application (see deployment section below for details)
 
 Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. We are currently not able to host a version of superset for others to use.
 You must clone our repository to run our code (assuming you have a local instance of Superset). Alternatively, you can also watch the demo video using the link at the top of the Readme.
