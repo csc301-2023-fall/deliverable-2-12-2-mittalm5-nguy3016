@@ -6,6 +6,7 @@ No other options were truly considered as we wanted to be consistent with the ch
 
 For the frontend, we chose to use HTML, CSS, and JS, as it was the simplest choice to create a fully functional frontend mockup.
 Additionally, an additional benefit is that it should be relatively simple to switch from HTML to React when we merge with the dedicated frontend sub-team.
+<br/><br/>
 
 ### 2. Individual contributions explaining who did what. You can keep it to at most one paragraph per person to highlight any work that is not captured in any of the repos.**
 
@@ -25,10 +26,12 @@ handled the HTTPs responses made by the front end when the user lands on the hom
 to the Apache Superset API using multiple endpoints to get access tokens, as well as all the information for the dashboards, charts and datasets that would be sent to the 
 frontend. She used Postman to test the API responses as well. Manya also worked with the existing proof of concept code, and found some issues that need to be discussed with 
 our partner. She attempted to fix the issue by converting the yaml file into json, however more time and input from UNICEF is needed for this. 
+<br/><br/>
 
 ### 3. All the details and instructions needed for your TA to see and verify your work. You need to provide enough documentation so your TA can confirm:**
 
 All relevant information on this topic is located in README.md
+<br/><br/>
 
 ### 4. Your application (see deployment section below for details)**
 
