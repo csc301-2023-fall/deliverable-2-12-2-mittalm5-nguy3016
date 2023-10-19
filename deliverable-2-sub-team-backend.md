@@ -35,6 +35,6 @@ All relevant information on this topic is located in README.md
 
 ### 4. Your application (see deployment section below for details)
 
-Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. We are currently not able to host a version of superset for others to use.
+Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. This is because it requires environment variables that point to a local instance of superset. We are currently not able to host a version of superset for others to use.
 You must clone our repository to run our code (assuming you have a local instance of Superset). Alternatively, you can also watch the demo video using the link at the top of the Readme.
 This issue will be rectified after meeting with our contact at UNICEF, as he has said he would be able to host a version of Superset for the team to use.
