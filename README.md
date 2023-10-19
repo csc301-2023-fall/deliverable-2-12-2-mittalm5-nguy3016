@@ -1,6 +1,6 @@
 Please Note that some of files in this repository are a part of the UNICEF proof of concept, namely ```export_dashboard.py```, ```api_request_handler.py```, ```create_derived_dashboard.py```, ```duplicate_chart.py```, ```create_empty_dashboard.py``` and ```superset_constants.py```.
 
-The code written by our group members is in the following files: ```views.py```, ```main.py```, ```api_helpers.py```, ```index.html```, ```clone.html```, ```styles.css``` and ```script.js```. We also made some edits to ```export_dashboard.py``` to fix the proof of concept, however we still need to talk to our partner for this first.
+The code written by our group members is in the following files: ```views.py```, ```main.py```, ```api_helpers.py```, ```index.html```, ```clone.html```, ```styles.css```, ```script.js``` and ```test_api.py```. We also made some edits to ```export_dashboard.py``` to fix the proof of concept, however we still need to talk to our partner for this first.
 
 
 We have made a demo video that showcases our work: https://www.loom.com/share/313f3af5cae74cd7894e1832628ac7fb?sid=f6ce5dbe-ee9e-49fb-8970-dd4c2ccba697. 
