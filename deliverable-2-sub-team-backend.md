@@ -1,4 +1,4 @@
-**1. A summary of your decisions and the options you considered for your component(s) (UI/frontend, logic/backend, database) so your TA knows what you have built and why.**
+### 1. A summary of your decisions and the options you considered for your component(s) (UI/frontend, logic/backend, database) so your TA knows what you have built and why.
 
 Since our subteam was focused on the backend, we chose to use Flask and Python. This is because the proof of concept made by the UNICEF team was also built in Python. 
 We used Flask since Apache Superset is also built using Flask. Additionally, within Python, we made API calls to the Apache Superset API using the Python requests library. 
@@ -7,7 +7,7 @@ No other options were truly considered as we wanted to be consistent with the ch
 For the frontend, we chose to use HTML, CSS, and JS, as it was the simplest choice to create a fully functional frontend mockup.
 Additionally, an additional benefit is that it should be relatively simple to switch from HTML to React when we merge with the dedicated frontend sub-team.
 
-**2. Individual contributions explaining who did what. You can keep it to at most one paragraph per person to highlight any work that is not captured in any of the repos.**
+### 2. Individual contributions explaining who did what. You can keep it to at most one paragraph per person to highlight any work that is not captured in any of the repos.**
 
 _Andrew_
 
@@ -26,11 +26,11 @@ to the Apache Superset API using multiple endpoints to get access tokens, as wel
 frontend. She used Postman to test the API responses as well. Manya also worked with the existing proof of concept code, and found some issues that need to be discussed with 
 our partner. She attempted to fix the issue by converting the yaml file into json, however more time and input from UNICEF is needed for this. 
 
-**3. All the details and instructions needed for your TA to see and verify your work. You need to provide enough documentation so your TA can confirm:**
+### 3. All the details and instructions needed for your TA to see and verify your work. You need to provide enough documentation so your TA can confirm:**
 
 All relevant information on this topic is located in README.md
 
-**4. Your application (see deployment section below for details)**
+### 4. Your application (see deployment section below for details)**
 
 Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. We are currently not able to host a version of superset for others to use.
 You must clone our repository to run our code (assuming you have a local instance of Superset). Alternatively, you can also watch the demo video using the link at the top of the Readme.
