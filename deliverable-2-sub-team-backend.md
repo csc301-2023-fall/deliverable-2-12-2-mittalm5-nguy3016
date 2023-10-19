@@ -24,7 +24,7 @@ _Manya_
 Manya focused on the backend of the user story. She first did a lot of set up, including installing a local instance of superset, and loading it with sample data. She then 
 handled the HTTPs responses made by the front end when the user lands on the home page, and when they press “clone”. Manya used the python requests library to make API calls 
 to the Apache Superset API using multiple endpoints to get access tokens, as well as all the information for the dashboards, charts and datasets that would be sent to the 
-frontend. She used Postman to test the API responses as well. Manya also worked with the existing proof of concept code, and found some issues that need to be discussed with 
+frontend. She used Postman to test the API responses, as well as writing some unit tests using Pytest. Manya also worked with the existing proof of concept code, and found some issues that need to be discussed with 
 our partner. She attempted to fix the issue by converting the yaml file into json, however more time and input from UNICEF is needed for this. 
 <br/><br/>
 
