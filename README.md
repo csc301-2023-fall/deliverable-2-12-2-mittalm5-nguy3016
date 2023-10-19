@@ -27,8 +27,6 @@ Finally, to run superset, run:
 
 `superset run -p 8088 --with-threads --reload --debugger`
 
-
-
 Unfortunately, since we require superset for the API calls to succeed, we cannot deploy the application. You must clone our repository to run our code. Alternatively, you can also watch the demo video using the link at the top of the Readme. 
 
 After cloning this repository, run the following command to install all the dependencies:
