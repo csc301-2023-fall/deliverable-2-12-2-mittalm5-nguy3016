@@ -9,7 +9,7 @@ For our subteam, to run the code a local instance of Apache Superset is required
 
 Setup Instructions
 
-(Superset is not supported by Windows so these steps are exclusively for MacOS and Linux)
+(Superset is not supported by Windows so these steps are exclusively for MacOS and Linux. There are workarounds for Windows in the following links as well but we were not able to get it to work for some of our members)
 
 To set up superset locally, execute the steps on this website: https://superset.apache.org/docs/installation/installing-superset-from-scratch/ 
 
